@@ -22,7 +22,7 @@ def get_orders_with_null_comments():
 
     statement = """
                 SELECT orderNumber, comments FROM orders
-                WHERE comment IS NULL
+                WHERE comments IS NULL
                 ORDER BY orderDate
                 ;"""
     

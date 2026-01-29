@@ -6,6 +6,7 @@ spec:
   type: NodePort
   selector:
     name: server
+    app: server
   ports:
     - protocol: TCP
       port: 8000

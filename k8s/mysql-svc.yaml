@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: mysql-svc
   labels:
-    app: mysql
+    app: mysql-svc
 spec:
   ports:
   - port: 3306

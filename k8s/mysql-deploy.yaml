@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: mysql:7
+        image: mysql:8.0
         ports:
         - containerPort: 3306
         env:
-        - name: MY_SQL_ROOT_PASSWORD
+        - name: MYSQL_ROOT_PASSWORD
           value: 'rootpassword'
         - name: MYSQL_DATABASE
           value: 'classicmodels'
