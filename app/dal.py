@@ -36,7 +36,12 @@ def get_first_5_customers():
     """Return the first 5 customers."""
     cnx = get_db_connection()
 
-    statement = """"""
+    statement = """
+                SELECT * FROM (SELECT customerName, contactLastName, contactFirstName FROM customers
+                LIMIT 5
+                ) 5_customers
+                ORDER BY contactLastName;
+                ;"""
 
     with cnx.cursor(dictionary=True) as cursor:
         cursor.execute(statement)
@@ -79,7 +84,9 @@ def get_customers_with_shipping_dates():
     cnx = get_db_connection()
 
     statement = """
-                """
+                SELECT customers.customerName, orders.orderDate FROM customers
+                LEFT JOIN orders ON customers.customerNumber = orders.customerNumber
+                ;"""
     
     with cnx.cursor(dictionary=True) as cursor:
         cursor.execute(statement)
