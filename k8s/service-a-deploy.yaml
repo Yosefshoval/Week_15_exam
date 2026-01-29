@@ -19,5 +19,3 @@ spec:
         image: yosefshoval/sql-exam-server:v1
         ports:
         - containerPort: 8000
-
-
