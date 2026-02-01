@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: server-svc
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
-    name: server
     app: server
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 8005
+      targetPort: 8005

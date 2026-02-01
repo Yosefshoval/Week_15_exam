@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server
+  name: server-app
   labels:
     app: server
 spec:
@@ -18,4 +18,4 @@ spec:
       - name: server
         image: yosefshoval/sql-exam-server:v1
         ports:
-        - containerPort: 8000
+        - containerPort: 8005
